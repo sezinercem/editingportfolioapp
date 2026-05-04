@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — CutCraft</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">CutCraft</div>
+    <nav><a href="index.html" class="btn secondary">Home</a><a href="login.html" class="btn">Log in</a></nav>
+  </header>
+  <main class="auth-layout">
+    <section class="auth-card wide">
+      <h1>Create your account</h1>
+      <p>Powered by Supabase authentication. Build your detailed editor dashboard after signup.</p>
+      <form id="signup-form" class="form-grid">
+        <label>Full Name<input required name="fullName" /></label>
+        <label>Email<input required type="email" name="email" /></label>
+        <label>Password<input required type="password" name="password" minlength="8" /></label>
+        <label>Primary Niche
+          <select required name="niche" id="niche-select">
+            <option value="">Choose niche...</option>
+            <option>Short-form Social Media</option><option>Wedding & Event Films</option><option>Gaming & Esports</option>
+            <option>Corporate & Brand Videos</option><option>Documentary</option><option>Podcast / YouTube Long-form</option>
+            <option>Real Estate</option><option>Music Videos</option><option>Other</option>
+          </select>
+        </label>
+        <label>Software Stack<input name="tools" placeholder="Premiere Pro, DaVinci Resolve, After Effects" /></label>
+        <label>Years of Experience<input type="number" name="experience" min="0" max="40" /></label>
+        <label class="full">Positioning Statement<textarea name="positioning" rows="3"></textarea></label>
+        <fieldset class="full" id="niche-focus"></fieldset>
+        <button class="btn full" type="submit">Sign up & continue</button>
+      </form>
+      <p id="status" class="status"></p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

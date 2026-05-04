@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log In — CutCraft</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">CutCraft</div>
+    <nav><a href="index.html" class="btn secondary">Home</a><a href="signup.html" class="btn">Sign up</a></nav>
+  </header>
+  <main class="auth-layout">
+    <section class="auth-card">
+      <h1>Log in</h1>
+      <p>Access your editor dashboard and manage profile, portfolio, settings, and team permissions.</p>
+      <form id="login-form">
+        <label>Email<input required type="email" name="email" /></label>
+        <label>Password<input required type="password" name="password" /></label>
+        <button class="btn" type="submit">Log In</button>
+      </form>
+      <p id="status" class="status"></p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

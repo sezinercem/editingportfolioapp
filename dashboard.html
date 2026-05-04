@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — CutCraft</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dash-layout">
+    <aside class="sidebar">
+      <div class="brand">CutCraft</div>
+      <ul class="side-nav">
+        <li><button class="tab active" data-tab="overview">Overview</button></li>
+        <li><button class="tab" data-tab="profile">Profile</button></li>
+        <li><button class="tab" data-tab="portfolio">Portfolio</button></li>
+        <li><button class="tab" data-tab="settings">Settings</button></li>
+        <li><button class="tab" data-tab="permissions">Editor Permissions</button></li>
+      </ul>
+      <button id="logout" class="btn secondary">Log out</button>
+    </aside>
+
+    <main class="dash-main" id="dashboard"></main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
