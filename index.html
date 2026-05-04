@@ -7,14 +7,21 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand-wrap">
-      <span class="brand-dot"></span>
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-one"></span>
+    <span class="orb orb-two"></span>
+    <span class="orb orb-three"></span>
+    <span class="grid-glow"></span>
+  </div>
+
+  <header class="site-header glass-nav">
+    <a class="brand-wrap" href="index.html" aria-label="CutCraft home">
+      <span class="brand-mark">✦</span>
       <div>
         <div class="brand">CutCraft</div>
-        <small>Portfolio Operating System for Editors</small>
+        <small>Portfolio OS for video editors</small>
       </div>
-    </div>
+    </a>
     <nav>
       <a href="login.html" class="btn secondary">Log in</a>
       <a href="signup.html" class="btn">Sign up</a>
@@ -22,46 +29,84 @@
   </header>
 
   <main>
-    <section class="hero white-section">
-      <div class="hero-content">
-        <h1>The complete portfolio app for modern video editors.</h1>
-        <p>
-          CutCraft helps editors build niche-specific portfolios, manage client proof points, assign editor permissions,
-          and run a polished personal brand from one dashboard.
+    <section class="hero">
+      <div class="hero-content reveal-up">
+        <p class="eyebrow">Niche-specific editor portfolios · Auth · Dashboard · Permissions</p>
+        <h1>Turn your editing work into a premium, client-winning portfolio.</h1>
+        <p class="hero-copy">
+          CutCraft gives video editors a polished homepage, guided niche positioning, Supabase-powered accounts,
+          and a detailed dashboard for portfolio content, profile details, settings, and editor permissions.
         </p>
         <div class="hero-cta">
-          <a class="btn" href="signup.html">Start Free</a>
-          <a class="btn secondary" href="#features">Explore Features</a>
+          <a class="btn btn-large" href="signup.html">Build my portfolio</a>
+          <a class="btn secondary btn-large" href="#showcase">See how it works</a>
+        </div>
+        <div class="hero-stats" aria-label="CutCraft feature highlights">
+          <div><strong>9+</strong><span>editor niches</span></div>
+          <div><strong>5</strong><span>dashboard areas</span></div>
+          <div><strong>24/7</strong><span>portfolio access</span></div>
         </div>
       </div>
-      <div class="hero-card">
-        <h3>What you get</h3>
-        <ul>
-          <li>Niche-tailored portfolio sections and service cards</li>
-          <li>Structured project and case-study storytelling</li>
-          <li>Profile and settings management per editor account</li>
-          <li>Role and permissions control for team editing workflows</li>
-        </ul>
+
+      <div class="hero-visual reveal-up delay-one" aria-label="Animated dashboard preview">
+        <div class="floating-card card-main">
+          <div class="window-bar"><span></span><span></span><span></span></div>
+          <div class="preview-header">
+            <div>
+              <small>Portfolio health</small>
+              <h3>Client-ready</h3>
+            </div>
+            <strong>94%</strong>
+          </div>
+          <div class="timeline-row"><span style="width: 82%"></span></div>
+          <div class="timeline-row"><span style="width: 64%"></span></div>
+          <div class="timeline-row"><span style="width: 91%"></span></div>
+          <div class="mini-grid">
+            <article><b>Case studies</b><em>12 drafted</em></article>
+            <article><b>Permissions</b><em>4 roles</em></article>
+          </div>
+        </div>
+        <div class="floating-card card-small card-niche">
+          <span class="chip">Wedding Films</span>
+          <p>Cinematic teaser, full film, color grade, delivery SLA.</p>
+        </div>
+        <div class="floating-card card-small card-metric">
+          <span class="spark">↗</span>
+          <p><strong>38%</strong> more inquiry-ready proof points</p>
+        </div>
       </div>
+    </section>
+
+    <section id="showcase" class="section-intro reveal-up">
+      <p class="eyebrow">Everything the app does</p>
+      <h2>A complete operating system for presenting editing expertise.</h2>
+      <p>
+        This is more than a simple portfolio page. CutCraft helps editors explain their niche, workflow, tools,
+        collaboration process, pricing readiness, proof points, and team access rules in a premium interface.
+      </p>
     </section>
 
     <section id="features" class="section-grid">
-      <article class="panel"><h2>Portfolio Engine</h2><p>Auto-generates section prompts for short-form, weddings, gaming, brand, docs, real estate, and more.</p></article>
-      <article class="panel"><h2>Client Proof Stack</h2><p>Highlight metrics, outcomes, before/after process notes, and revision systems.</p></article>
-      <article class="panel"><h2>Editor Workspace</h2><p>Keep profile, availability, pricing tiers, and editing stack in one place.</p></article>
-      <article class="panel"><h2>Permissions</h2><p>Prepare role structures for assistants, collaborators, and reviewers with controlled visibility.</p></article>
+      <article class="panel feature-card reveal-up"><span class="icon-bubble">01</span><h3>Portfolio Engine</h3><p>Generate hero messaging, service cards, project breakdowns, and case-study prompts tailored to your editing niche.</p></article>
+      <article class="panel feature-card reveal-up"><span class="icon-bubble">02</span><h3>Client Proof Stack</h3><p>Document measurable outcomes, revision wins, retention improvements, turnaround speed, and creative decisions.</p></article>
+      <article class="panel feature-card reveal-up"><span class="icon-bubble">03</span><h3>Editor Workspace</h3><p>Manage your profile, tools, availability, niche statement, project categories, and portfolio readiness in one place.</p></article>
+      <article class="panel feature-card reveal-up"><span class="icon-bubble">04</span><h3>Permissions</h3><p>Plan collaborator access for owners, senior editors, assistants, reviewers, and clients with clear role boundaries.</p></article>
     </section>
 
-    <section class="section-detail">
-      <h2>Built to explain your value clearly</h2>
-      <p>
-        Most editors lose clients because their portfolio only shows visuals, not outcomes. CutCraft helps you present strategic thinking,
-        creative reasoning, and delivery reliability in a format that wins trust quickly.
-      </p>
-      <p>
-        Use guided onboarding to define your niche, then craft a positioning statement, service map, and process narrative that resonates with
-        your target clients. Add your preferred tools, scope boundaries, and collaboration style.
-      </p>
+    <section class="workflow-section">
+      <div class="workflow-copy reveal-up">
+        <p class="eyebrow">From blank page to premium positioning</p>
+        <h2>Guided setup that makes your expertise obvious.</h2>
+        <p>
+          Choose your niche, answer targeted prompts, and CutCraft transforms your answers into dashboard sections
+          that help prospective clients understand why your editing process is worth hiring.
+        </p>
+      </div>
+      <div class="workflow-steps">
+        <div class="step-card reveal-up"><span>1</span><h3>Define your niche</h3><p>Pick short-form, weddings, gaming, brand, docs, podcasts, real estate, music videos, or custom.</p></div>
+        <div class="step-card reveal-up"><span>2</span><h3>Capture your proof</h3><p>Store positioning, tools, outcomes, timelines, packages, and workflow details.</p></div>
+        <div class="step-card reveal-up"><span>3</span><h3>Run your dashboard</h3><p>Use the sidebar workspace to manage profile, portfolio, settings, and permissions.</p></div>
+      </div>
     </section>
   </main>
 
