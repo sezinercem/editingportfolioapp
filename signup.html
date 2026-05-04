@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — CutCraft</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="auth-layout">
+    <section class="auth-card wide">
+      <h1>Create your editor account</h1>
+      <p>Set your niche once and your portfolio structure updates automatically.</p>
+      <form id="signup-form" class="form-grid">
+        <label>Full Name
+          <input required name="fullName" placeholder="Jordan Lee" />
+        </label>
+        <label>Email
+          <input required type="email" name="email" placeholder="jordan@editstudio.com" />
+        </label>
+        <label>Password
+          <input required type="password" name="password" minlength="8" placeholder="At least 8 characters" />
+        </label>
+        <label>Primary Editing Niche
+          <select required name="niche" id="niche-select">
+            <option value="">Choose a niche...</option>
+            <option>Short-form Social Media</option>
+            <option>Wedding & Event Films</option>
+            <option>Gaming & Esports</option>
+            <option>Corporate & Brand Videos</option>
+            <option>Documentary</option>
+            <option>Podcast / YouTube Long-form</option>
+            <option>Real Estate</option>
+            <option>Music Videos</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>Editing Software Stack
+          <input name="tools" placeholder="Premiere Pro, DaVinci Resolve, After Effects" />
+        </label>
+        <label>Years of Experience
+          <input type="number" min="0" max="40" name="experience" placeholder="5" />
+        </label>
+        <label class="full">Niche Positioning Statement
+          <textarea name="positioning" rows="4" placeholder="I help coaches repurpose long-form content into high-retention vertical clips that increase qualified leads."></textarea>
+        </label>
+        <fieldset class="full niche-focus" id="niche-focus"></fieldset>
+        <button class="btn full" type="submit">Create Account & Build Portfolio</button>
+      </form>
+      <p class="switch">Already have an account? <a href="login.html">Log in</a></p>
+      <p id="status" class="status"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
