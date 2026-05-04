@@ -139,7 +139,7 @@ function sampleVideoCards() {
 function renderUploadedVideos() {
   const grid = document.getElementById('video-grid');
   if (!grid) return;
-  const uploaded = uploadedVideos.map((video, index) => `<article class="video-card"><video src="${video.url}" controls muted playsinline></video><div><h3>${safe(video.name)}</h3><p>${safe(video.size)} · Session upload #${index + 1}</p></div></article>`).join('');
+  const uploaded = uploadedVideos.map((video, index) => `<article class="video-card"><div class="uploaded-video-frame"><video src="${video.url}" controls muted playsinline></video></div><div><h3>${safe(video.name)}</h3><p>${safe(video.size)} · Session upload #${index + 1}</p></div></article>`).join('');
   grid.innerHTML = uploaded + sampleVideoCards();
 }
 
